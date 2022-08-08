@@ -17,7 +17,7 @@ const SearchBar = () => {
   }
 
   const handleEnterSearch = (e) => {
-    if(e.key == 'Enter'){
+    if(e.key === 'Enter'){
       fetchData(`search/photos?page=1&query=${searchValue}&client_id=${process.env.REACT_APP_ACCESS_KEY}&per_page=20`);
       setSearchValue("");
       setSearchImage(searchValue);
